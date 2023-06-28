@@ -1,0 +1,15 @@
+<p>Welcome to {{hotelName}}</p>
+
+<div *ngIf="rooms.availableRooms > 0">
+  <p>Rooms List</p>
+</div>
+
+<div *ngIf="roomlist.length > 0">
+  <div *ngFor="let room of roomlist; let i=index">
+    <p>{{i + 1}}</p>
+    <h2>{{room.roomType}}</h2>
+    <h3>{{room.roomNumber}}</h3>
+  </div>
+</div>
+
+<button (click)="toggle()">Toggle</button>
